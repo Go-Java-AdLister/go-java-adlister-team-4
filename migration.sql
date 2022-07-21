@@ -1,6 +1,6 @@
 USE adlister_db;
 
-DROP TABLE IF EXISTS ad_images;
+# DROP TABLE IF EXISTS ad_images;
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
 
@@ -18,10 +18,10 @@ CREATE TABLE ads
 (
     id          INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id     INT UNSIGNED NOT NULL,
-    category    VARCHAR(240),
-    plant_name  VARCHAR(240),
+    category    VARCHAR(240) NOT NULL,
+    plant_name  VARCHAR(240) NOT Null,
     location    VARCHAR(240),
-    price       VARCHAR(50),
+    price       VARCHAR(50) NOT NULL,
     description TEXT,
     photo VARCHAR(300),
     PRIMARY KEY (id),

@@ -45,11 +45,11 @@ public class MySQLAdsDao implements Ads {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getCategory());
-            stmt.setString(3, ad.getDescription());
-            stmt.setString(4, ad.getDescription());
-            stmt.setString(5, ad.getDescription());
+            stmt.setString(3, ad.getPlant_name());
+            stmt.setString(4, ad.getLocation());
+            stmt.setString(5, ad.getPrice());
             stmt.setString(6, ad.getDescription());
-            stmt.setString(7, ad.getDescription());
+            stmt.setString(7, ad.getPhoto());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -68,7 +68,7 @@ public class MySQLAdsDao implements Ads {
                 rs.getString("location"),
                 rs.getString("price"),
                 rs.getString("description"),
-                rs.getString("plant_photo")
+                rs.getString("photo")
                 );
     }
 

@@ -5,6 +5,20 @@ public class Ad {
     private long userId;
     private String category;
     private String plant_name;
+    private String location;
+    private String price;
+    private String description;
+    private String photo;
+
+    public Ad(long userId, String category, String plant_name, String location, String price, String description, String photo) {
+        this.userId = userId;
+        this.category = category;
+        this.plant_name = plant_name;
+        this.location = location;
+        this.price = price;
+        this.description = description;
+        this.photo = photo;
+    }
 
     public String getCategory() {
         return category;
@@ -57,10 +71,7 @@ public class Ad {
         this.photo = photo;
     }
 
-    private String location;
-    private String price;
-    private String description;
-    private String photo;
+
 
 //    public Ad(long id, long userId, String title, String description) {
 //        this.id = id;
@@ -75,7 +86,7 @@ public class Ad {
 //        this.description = description;
 //    }
 
-    public Ad(long id, String user_id, String category, String plant_name, String location, String price, String description, String plant_photo) {
+    public Ad(long id, String user_id, String category, String plant_name, String location, String price, String description, String photo) {
     }
 
 
