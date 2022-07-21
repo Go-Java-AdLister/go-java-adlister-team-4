@@ -32,8 +32,8 @@
             <textarea id="description" name="description" class="form-control" type="text"></textarea>
         </div>
         <div class="form-group">
-            <label for="plant_photo">Plant Photo</label>
-            <input type="file" id="plant_photo" name="filename">
+            <label for="photo">Plant Photo</label>
+            <input type="file" id="photo" name="filename">
             <input type="submit" class="btn btn-block btn-primary">
         </div>
     </form>
