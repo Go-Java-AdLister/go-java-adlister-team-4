@@ -16,7 +16,12 @@
         <div class="col-md-6">
             <h2>${ad.plant_name}</h2>
             <p>${ad.description}</p>
+
+            <a href="<c:url value="/ads/details">
+                    <c:param name="id" value="${ad.id}"/>
+                    </c:url>">View Ad</a>
         </div>
+
     </c:forEach>
 </div>
 

@@ -79,4 +79,22 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+//    implementing findOne method from ads.java to show a detailed ad post
+
+
+    @Override public Ad findByID(long id) {
+    PreparedStatement stmt = null;
+    try {
+        stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ? ");
+        stmt.setLong(1, id);
+        ResultSet rs = stmt.executeQuery();
+        rs.next();
+        return extractAd(rs);
+    } catch (SQLException e) {
+        throw new RuntimeException("Error retrieving all ads.", e);
+    }
+}
+
+
 }
