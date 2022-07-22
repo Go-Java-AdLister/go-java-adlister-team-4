@@ -69,7 +69,7 @@ public class MySQLAdsDao implements Ads {
                 rs.getString("price"),
                 rs.getString("description"),
                 rs.getString("photo")
-                );
+        );
     }
 
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
@@ -83,18 +83,39 @@ public class MySQLAdsDao implements Ads {
 //    implementing findOne method from ads.java to show a detailed ad post
 
 
-    @Override public Ad findByID(long id) {
+    @Override
+    public Ad findByID(long id) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ? ");
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+@Override
+    public Ad editAd(Ad ad) {
     PreparedStatement stmt = null;
     try {
-        stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ? ");
-        stmt.setLong(1, id);
-        ResultSet rs = stmt.executeQuery();
-        rs.next();
-        return extractAd(rs);
+        stmt = connection.prepareStatement("UPDATE ads SET category = ?, plant_name = ?, location = ?, price = ?, description = ?, photo = ? WHERE id = ? ");
+
+        stmt.setString(1, ad.getCategory());
+        stmt.setString(2, ad.getPlant_name());
+        stmt.setString(3, ad.getLocation());
+        stmt.setString(4, ad.getPrice());
+        stmt.setString(5, ad.getDescription());
+        stmt.setString(6, ad.getPhoto());
+        stmt.setLong(7, ad.getId());
+
+        stmt.executeUpdate();
+
+        return ad;
     } catch (SQLException e) {
-        throw new RuntimeException("Error retrieving all ads.", e);
+        throw new RuntimeException("Error updating ads.", e);
     }
 }
-
 
 }
