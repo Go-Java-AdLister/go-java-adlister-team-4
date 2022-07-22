@@ -24,6 +24,7 @@
             <h2><c:out value="${ads.plant_name}"></c:out></h2>
             <p><c:out value="${ads.description}"></c:out></p>
             <p><c:out value="${ads.category}"></c:out></p>
-
+            <form method="get" action="/ads/details/edit"><button type="submit">Edit</button>
+            <input type="hidden" name="id" id="id" value="${ads.id}"></form>
         </div>
 </div>
