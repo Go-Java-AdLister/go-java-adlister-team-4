@@ -24,6 +24,9 @@
             <h2><c:out value="${ads.plant_name}"></c:out></h2>
             <p><c:out value="${ads.description}"></c:out></p>
             <p><c:out value="${ads.category}"></c:out></p>
-
+            <form method="post" action="/ads/details/delete">
+            <input type="hidden" name="id" value="${ads.id}" id="id">
+            <input value="delete" type="submit">
+            </form>
         </div>
 </div>
