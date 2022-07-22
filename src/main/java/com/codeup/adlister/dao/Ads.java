@@ -12,7 +12,11 @@ public interface Ads {
     Long insert(Ad ad);
 
     //   adding abstract method to the interface to display ad detailed page
-    Ad findByID(long id);
+
+        Ad findByID(long id);
+        // finds the ad id
+    void deleteAd(long id);
 
     Ad editAd(Ad ad);
+
 }
