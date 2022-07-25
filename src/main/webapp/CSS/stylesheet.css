@@ -1,4 +1,21 @@
 body {
-    background-image: url("/css/plant_background.jpeg");
-    background-size: 100%;
+    background-image: url("/IMG/dark_monsterra_leaves.png");
+    background-size: 90%;
+}
+
+.navbar navbar-default {
+    color: black;
+}
+
+.navbar-brand {
+    font-family: "Marker Felt";
+    font-size: large;
+    color: black;
+}
+
+.adlister_container {
+    font-family: "Mochiy Pop One";
+    color: #B7BF96;
+    text-align: center;
+
 }
