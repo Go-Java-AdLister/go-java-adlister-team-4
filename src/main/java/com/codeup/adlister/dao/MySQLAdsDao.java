@@ -84,6 +84,7 @@ public class MySQLAdsDao implements Ads {
 
 
     @Override
+    // Finds ad by its id and pulls it out for use
     public Ad findByID(long id) {
         PreparedStatement stmt = null;
         try {
@@ -103,7 +104,7 @@ public class MySQLAdsDao implements Ads {
 
 
         try {
-
+            //connects to database to find each column associated with a specific ID so that it can be updated
             stmt = connection.prepareStatement("UPDATE ads SET category = ?, plant_name = ?, location = ?, price = ?, description = ?, photo = ? WHERE id = ? ");
 
 

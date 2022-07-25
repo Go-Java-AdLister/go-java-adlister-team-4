@@ -4,9 +4,9 @@
         user = (User) session.getAttribute("user");
     }
     if (user != null) {
-        request.setAttribute("navbar", "<li><a href=\"/ads\">HOME</a></li>" + "<li><a href=\"/ads\">ADS</a></li>" + "<li><a href=\"/ads/create\">CREATE AD</a></li>\n" + "<li><a href=\"/profile\">PROFILE</a></li>" + "<li><a href=\"/logout\">LOGOUT</a></li>");
+        request.setAttribute("navbar", "<li><a href=\"/\">HOME</a></li>" + "<li><a href=\"/ads\">ADS</a></li>" + "<li><a href=\"/ads/create\">CREATE AD</a></li>\n" + "<li><a href=\"/profile\">PROFILE</a></li>" + "<li><a href=\"/logout\">LOGOUT</a></li>");
     } else {
-        request.setAttribute("navbar", "<li><a href=\"/ads\">HOME</a></li>" + "<li><a href=\"/ads\">ADS</a></li>" + "<li><a href=\"/login\">LOGIN</a></li>");
+        request.setAttribute("navbar", "<li><a href=\"/\">HOME</a></li>" + "<li><a href=\"/ads\">ADS</a></li>" + "<li><a href=\"/login\">LOGIN</a></li>");
     }
 %>
 <nav class="navbar navbar-default">

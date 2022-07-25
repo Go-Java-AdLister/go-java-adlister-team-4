@@ -16,7 +16,7 @@ public class editDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         long id = Long.parseLong(request.getParameter("id"));
-
+        //
         request.setAttribute("ads", DaoFactory.getAdsDao().findByID(id));
         request.getRequestDispatcher("/WEB-INF/ads/edit.jsp").forward(request, response);
     }
