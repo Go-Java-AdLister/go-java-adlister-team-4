@@ -96,39 +96,46 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
-@Override
+
+    @Override
     public Ad editAd(Ad ad) {
-    PreparedStatement stmt = null;
-    try {
-        stmt = connection.prepareStatement("UPDATE ads SET category = ?, plant_name = ?, location = ?, price = ?, description = ?, photo = ? WHERE id = ? ");
+        PreparedStatement stmt = null;
 
-        stmt.setString(1, ad.getCategory());
-        stmt.setString(2, ad.getPlant_name());
-        stmt.setString(3, ad.getLocation());
-        stmt.setString(4, ad.getPrice());
-        stmt.setString(5, ad.getDescription());
-        stmt.setString(6, ad.getPhoto());
-        stmt.setLong(7, ad.getId());
 
-        stmt.executeUpdate();
+        try {
 
-        return ad;
-    } catch (SQLException e) {
-        throw new RuntimeException("Error updating ads.", e);
+            stmt = connection.prepareStatement("UPDATE ads SET category = ?, plant_name = ?, location = ?, price = ?, description = ?, photo = ? WHERE id = ? ");
+
+
+            stmt.setString(1, ad.getCategory());
+            stmt.setString(2, ad.getPlant_name());
+            stmt.setString(3, ad.getLocation());
+            stmt.setString(4, ad.getPrice());
+            stmt.setString(5, ad.getDescription());
+            stmt.setString(6, ad.getPhoto());
+            stmt.setLong(7, ad.getId());
+
+
+            stmt.executeUpdate();
+            return ad;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating ads.", e);
+        }
     }
-}
-@Override public void deleteAd(long id) {
-    PreparedStatement stmt = null;
-    try {
-        stmt = connection.prepareStatement("DELETE FROM ads WHERE id = ? ");
-        stmt.setLong(1, id);
-        stmt.executeUpdate();
+
+    @Override
+    public void deleteAd(long id) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("DELETE FROM ads WHERE id = ? ");
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
 
 
-    } catch (SQLException e) {
-        throw new RuntimeException("Error deleting ad.", e);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad.", e);
+        }
     }
-}
 
 
 }
