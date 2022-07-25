@@ -2,6 +2,7 @@ body {
 
     background-image: url("/IMG/dark_monsterra_leaves.png");
     background-size: 90%;
+    color: #E4DEAE;
 
 }
 
@@ -23,6 +24,9 @@ p {
     color: #E4DEAE;
 }
 
+h3 {
+    text-align: center;
+}
 
 /*corner text "adlister" */
 .navbar-brand {
@@ -53,5 +57,23 @@ p {
 .button {
     background-color: #E4DEAE;
     color: black;
+    width: 80%;
+}
+
+.btn {
+    width: 80%;
+    outline-color: #011B10;
+}
+
+
+.form-group {
+    background-color: #E4DEAE;
+    opacity: .9;
+    color: black;
+    width: 80%;
+}
+
+.btn-block {
+    background-color: #E4DEAE;
 }
 
