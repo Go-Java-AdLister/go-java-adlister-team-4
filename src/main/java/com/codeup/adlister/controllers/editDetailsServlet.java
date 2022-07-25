@@ -36,6 +36,6 @@ public class editDetailsServlet extends HttpServlet {
                 id, user.getId(), editCat, editName, editLocation, editPrice, editDescription, editPhoto
         );
         DaoFactory.getAdsDao().editAd(ad);
-
+        response.sendRedirect("/ads");
 
 }}
