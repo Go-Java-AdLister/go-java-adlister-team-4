@@ -3,19 +3,51 @@ body {
     background-size: 90%;
 }
 
-.navbar navbar-default {
-    color: black;
+h1 {
+    text-align: center;
+    font-family: "Manrope ExtraBold";
+    color: #FEFAE0;
 }
 
+h2 {
+    text-align: center;
+    font-family: "Manrope Semibold";
+    color: #E4DEAE;
+}
+
+p {
+    text-align: center;
+    color: #E4DEAE;
+}
+
+
+/*corner text "adlister" */
 .navbar-brand {
-    font-family: "Marker Felt";
+    font-family: "Lobster";
     font-size: large;
     color: black;
 }
 
+.navbar-default {
+    opacity: .2;
+    color: black;
+}
+
+
+/*    class id to edit Ad Details    */
 .adlister_container {
     font-family: "Mochiy Pop One";
     color: #B7BF96;
-    text-align: center;
-
 }
+
+/*    class ID to edit "edit" and "delete" buttons   */
+.col-md-6 {
+    text-align: center;
+}
+
+/*      styling for the button      */
+.button {
+    background-color: #E4DEAE;
+    color: black;
+}
+

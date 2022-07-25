@@ -16,7 +16,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<div class="container">
+<div class="adDetailsContainer">
     <h1>Look at the details on this plant!</h1>
 
 
@@ -27,10 +27,10 @@
 
             <form method="post" action="/ads/details/delete">
             <input type="hidden" name="id" value="${ads.id}" id="id">
-            <input value="delete" type="submit">
+            <input class ="button" value="delete" type="submit">
             </form>
 
-            <form method="get" action="/ads/details/edit"><button type="submit">Edit</button>
+            <form method="get" action="/ads/details/edit"><button class = "button" type ="submit">Edit</button>
             <input type="hidden" name="id" id="id" value="${ads.id}"></form>
         </div>
 </div>
