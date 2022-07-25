@@ -34,6 +34,10 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("description"),
             request.getParameter("photo")
         );
+        System.out.println(ad.getPhoto());
+
+        System.out.println(ad.getDescription());
+
         //if statement for giving alert if no commenet
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");

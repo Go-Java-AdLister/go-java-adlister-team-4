@@ -34,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="photo">Plant Photo</label>
-            <input type="file" id="photo" name="filename">
+            <input type="text" id="photo" name="filename">
             <input type="submit" class="btn btn-block btn-primary">
         </div>
     </form>

@@ -26,7 +26,7 @@
 
     <div class="col-md-6">
         <h2><c:out value="${ads.plant_name}"></c:out></h2>
-        <p><b>Picture</b><br><c:out value="${ads.photo}"></c:out></p>
+        <p><b>Picture</b><br><img src = "<c:out value="${ads.photo}"></c:out>"></p>
         <p><b>Description</b><br> <c:out value="${ads.description}"></c:out></p>
         <p><b>Category</b><br> <c:out value="${ads.category}"></c:out></p>
         <p><b>Location</b></b><br> <c:out value="${ads.location}"></c:out></p>
