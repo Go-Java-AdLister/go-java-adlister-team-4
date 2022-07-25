@@ -22,8 +22,10 @@
 
         <div class="col-md-6">
             <h2><c:out value="${ads.plant_name}"></c:out></h2>
-            <p><c:out value="${ads.description}"></c:out></p>
-            <p><c:out value="${ads.category}"></c:out></p>
+            <p><b>Description</b><br> <c:out value="${ads.description}"></c:out></p>
+            <p><b>Category</b><br> <c:out value="${ads.category}"></c:out></p>
+            <p><b>Location</b></b><br> <c:out value="${ads.location}"></c:out></p>
+            <p><b>Price</b><br><c:out value="${ads.price}"></c:out></p>
 
             <form method="post" action="/ads/details/delete">
             <input type="hidden" name="id" value="${ads.id}" id="id">
