@@ -20,7 +20,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-<div class="container">
+<div class="adDetailsContainer">
     <h1>Look at the details on this plant!</h1>
 
 
@@ -30,6 +30,7 @@
         <p><b>Category</b><br> <c:out value="${ads.category}"></c:out></p>
         <p><b>Location</b></b><br> <c:out value="${ads.location}"></c:out></p>
         <p><b>Price</b><br><c:out value="${ads.price}"></c:out></p>
+
 
         <form class="delete" method="post" action="/ads/details/delete">
             ${delete}
@@ -41,4 +42,5 @@
             <input type="hidden" name="id" id="id" value="<c:out value="${ads.id}"/>"/>
         </form>
     </div>
+
 </div>
