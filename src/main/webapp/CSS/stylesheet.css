@@ -17,6 +17,7 @@ h2 {
     color: #E4DEAE;
 }
 
+
 p {
     text-align: center;
     color: #E4DEAE;
@@ -27,12 +28,13 @@ p {
 .navbar-brand {
     font-family: "Lobster";
     font-size: large;
-    color: black;
 }
 
+
+/*     class ID to edit navbar details  */
 .navbar-default {
-    opacity: .2;
-    color: black;
+    background-color: #BEED76;
+    opacity: .85;
 }
 
 

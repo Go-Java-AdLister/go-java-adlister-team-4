@@ -28,7 +28,7 @@ public class adsDetailsServlet extends HttpServlet {
             user = (User) session.getAttribute("user");
         }
         if (user != null && user.getId() == ad.getUserId()) {
-            request.setAttribute("edit", "<button type=\"submit\">Edit</button>\n");
+            request.setAttribute("edit", "<button class = \"button\" type=\"submit\">Edit</button>\n");
         } else {
             request.setAttribute("edit", "");
         }
@@ -38,7 +38,7 @@ public class adsDetailsServlet extends HttpServlet {
         }
         if (user != null && user.getId() == ad.getUserId()) {
             request.setAttribute("delete",
-                    "<input value=\"delete\" type=\"submit\">\n");
+                    "<input class = \"button\" value=\"delete\" type=\"submit\">\n");
         } else {
             request.setAttribute("delete", "");
         }
